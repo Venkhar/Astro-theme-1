@@ -1,0 +1,25 @@
+---
+import Container from '@/components/container.astro';
+import Cta from '@/components/cta.astro';
+import Features from '@/components/features.astro';
+import Hero from '@/components/hero.astro';
+import Logos from '@/components/logos.astro';
+import Layout from '@/layouts/Layout.astro';
+
+const title = 'Accueil - Apollinaire en Marinière';
+const description = 'Des ressources pédagogiques innovantes pour enseigner le français au collège';
+const keywords = ['français', 'collège', '6ème', '5ème', 'pédagogie'];
+const tags = [];
+const custom = {};
+---
+
+<Layout title="">
+  <Container>
+    <Hero />
+    <Features />
+    <Logos />
+    <Cta />
+  </Container>
+</Layout>
+<hero  />
+<features  />
