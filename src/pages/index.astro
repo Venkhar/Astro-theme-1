@@ -8,16 +8,32 @@ import Layout from '@/layouts/Layout.astro';
 
 const title = 'Accueil - Apollinaire en Marinière';
 const description = 'Des ressources pédagogiques innovantes pour enseigner le français au collège';
-const keywords = ["fran\u00e7ais", "coll\u00e8ge", "6\u00e8me", "5\u00e8me", "p\u00e9dagogie"];
+const keywords = ["français", "collège", "6ème", "5ème", "pédagogie"];
 const tags = [];
 const custom = {};
 ---
 
-<Layout title="">
+<Layout title={title}>
   <Container>
-    <hero title="Révolutionnez vos cours de français" subtitle="Des ressources pédagogiques clés en main pour les classes de 6ème et 5ème" description="Apollinaire en Marinière vous accompagne au quotidien avec des fiches pédagogiques, des exercices interactifs et des séquences complètes conformes aux programmes de l\'Éducation Nationale." cta_primary={{"text": "Découvrir les ressources", "url": "/ressources"}} cta_secondary={{"text": "Créer un compte gratuit", "url": "/inscription"}} image="/images/hero-enseignement.jpg" image_alt="Professeur de français en classe avec ses élèves" />
-    <features title="Tout ce dont vous avez besoin pour enseigner" subtitle="Des ressources pensées par des enseignants, pour des enseignants" features={[{"title": "Fiches pédagogiques 6ème", "description": "Plus de 150 fiches complètes couvrant tout le programme de 6ème : grammaire, conjugaison, vocabulaire, littérature et expression écrite.", "icon": "document"}, {"title": "Séquences 5ème", "description": "Des séquences clés en main avec progressions détaillées, évaluations et corrections. Gain de temps assuré !", "icon": "book"}, {"title": "Exercices interactifs", "description": "Exercices autocorrigés en ligne pour motiver vos élèves et suivre leur progression en temps réel.", "icon": "screen"}, {"title": "Conformité aux programmes", "description": "Toutes nos ressources sont alignées sur les programmes officiels et régulièrement mises à jour.", "icon": "check"}]} />
+    <Hero>
+      <Fragment slot="title">
+        Révolutionnez vos <span class="text-primary">cours de français</span>
+      </Fragment>
+      <Fragment slot="desc">
+        Des ressources pédagogiques clés en main pour les classes de 6ème et 5ème.
+        Apollinaire en Marinière vous accompagne au quotidien avec des fiches pédagogiques,
+        des exercices interactifs et des séquences complètes conformes aux programmes de l'Éducation Nationale.
+      </Fragment>
+    </Hero>
+    <Features>
+      <Fragment slot="title">
+        Tout ce dont vous avez besoin pour enseigner
+      </Fragment>
+      <Fragment slot="desc">
+        Des ressources pensées par des enseignants, pour des enseignants
+      </Fragment>
+    </Features>
     <Logos />
-    <cta title="Prêt à simplifier votre préparation de cours ?" description="Créez votre compte gratuitement et accédez à 10 ressources premium offertes" cta_button={{"text": "Commencer maintenant", "url": "/inscription"}} />
+    <Cta />
   </Container>
 </Layout>
